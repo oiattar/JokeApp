@@ -1,4 +1,4 @@
-# BuildItBigger
+# JokeApp
 
 This is an app that displays hilarious jokes using Google Cloud Endpoints
 
