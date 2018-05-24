@@ -6,14 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.example.androidjokes.JokeActivity;
 import com.example.jokesmith.Joker;
 
 
-public class MainActivity extends AppCompatActivity {
-    public static final String JOKE_KEY = "joke";
+public class MainActivity extends AppCompatActivity implements JokeListener {
 
     Joker joker;
 
@@ -48,11 +46,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        Intent intent = new Intent(this, JokeActivity.class);
-        intent.putExtra(JOKE_KEY, joker.getJoke());
-        startActivity(intent);
-        Toast.makeText(this, joker.getJoke(), Toast.LENGTH_SHORT).show();
+        new JokeFetcher().execute(this);
     }
 
-
+    @Override
+    public void onJokeLoaded(String joke) {
+        Intent intent = new Intent(this, JokeActivity.class);
+        intent.putExtra(Intent.EXTRA_TEXT, joker.getJoke());
+        startActivity(intent);
+    }
 }
