@@ -19,8 +19,8 @@ import javax.inject.Named;
 )
 public class MyEndpoint {
 
-    @ApiMethod(name = "getAJoke")
-    public MyBean getAJoke() {
+    @ApiMethod(name = "getJoke")
+    public MyBean getJoke() {
         MyBean response = new MyBean();
         Joker joker = new Joker();
         response.setData(joker.getJoke());

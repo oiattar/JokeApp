@@ -37,7 +37,7 @@ public class JokeFetcher extends AsyncTask<JokeListener, Void, String> {
         jokeListener = params[0];
         String joke = "LOL";
         try {
-            joke = apiService.getAJoke().execute().getData();
+            joke = apiService.getJoke().execute().getData();
         } catch (IOException e) {
             Log.d(TAG,e.getMessage());
         }
