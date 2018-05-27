@@ -10,14 +10,12 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 
 import com.example.androidjokes.JokeActivity;
-import com.example.jokesmith.Joker;
 
 
 public class MainActivity extends AppCompatActivity implements JokeListener {
 
-    Joker joker;
-    ProgressBar progressBar;
-    Button button;
+    private ProgressBar progressBar;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +23,6 @@ public class MainActivity extends AppCompatActivity implements JokeListener {
         setContentView(R.layout.activity_main);
         progressBar = findViewById(R.id.progressBar);
         button = findViewById(R.id.button);
-        joker = new Joker();
     }
 
 

@@ -11,7 +11,7 @@ import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
 
 import java.io.IOException;
 
-public class JokeFetcher extends AsyncTask<JokeListener, Void, String> {
+class JokeFetcher extends AsyncTask<JokeListener, Void, String> {
 
     private static final String TAG = JokeFetcher.class.getSimpleName();
 
@@ -27,7 +27,7 @@ public class JokeFetcher extends AsyncTask<JokeListener, Void, String> {
                     .setRootUrl(BuildConfig.URL)
                     .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
                         @Override
-                        public void initialize(AbstractGoogleClientRequest<?> request) throws IOException {
+                        public void initialize(AbstractGoogleClientRequest<?> request) {
                             request.setDisableGZipContent(true);
                         }
                     });

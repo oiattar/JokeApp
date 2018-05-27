@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Joker {
 
-    private String[] jokes = new String[] {
+    private final String[] jokes = new String[] {
             "What happens to a frog's car when it breaks down? \n" +
                     "It gets toad away.",
             "I submitted 10 puns to a joke-writing competition to see if any of them made the finals. \n" +

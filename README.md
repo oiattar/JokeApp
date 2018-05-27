@@ -8,5 +8,5 @@ This is an app that displays hilarious jokes using Google Cloud Endpoints
 * Java library contains the functionality of retrieving jokes from Google Cloud Endpoints "GCE".
 * Android Library contains an Android Activity to display the joke.
 
-To start the local server please open the Gradle pane in the `Android Studio` > `:backend` > `Tasks` > `app engine standard enviorment` > execute the `appengineStart` Task.
+To start the local server please open the Gradle pane in the `Android Studio` > `:backend` > `Tasks` > `app engine standard environment` > execute the `appengineStart` Task.
 and execute the `appengineStop` to stop it.
