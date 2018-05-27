@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements JokeListener {
         progressBar.setVisibility(View.GONE);
         button.setVisibility(View.VISIBLE);
         Intent intent = new Intent(this, JokeActivity.class);
-        intent.putExtra(Intent.EXTRA_TEXT, joker.getJoke());
+        intent.putExtra(Intent.EXTRA_TEXT, joke);
         startActivity(intent);
     }
 }
